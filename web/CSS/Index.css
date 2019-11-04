@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/10/2019, 03:40:31 PM
+    Author     : Lucas
+*/
+.modal{
+    background-image: radial-gradient(#6ACF28, #1669CA);
+}
+.modal-content{
+    background-image: radial-gradient(#1c7430, #ffffff); 
+}
+.inicio{
+    text-align: center;
+    font-family: fantasy;
+    margin-top: 200px;
+}
+#bienvenido{
+    margin-top: 100px;
+}
+#exampleModal{
+    color: #000099;
+    font-size:  1.2em;
+    font-family: cursive;
+}
+.none{
+    color: red;
+}
+.form-control{
+    text-decoration: red;
+    border: none;
+    border-bottom: 5px solid #000099;
+}
+.none{
+    display: none;
+}
+span{
+    color: red;
+}
+body{
+    background-image: url(../Imagen/fondo.jpeg);
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+
+
+}

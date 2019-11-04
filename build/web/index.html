@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+    To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Encuentro Juvenil</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="CSS/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="CSS/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="CSS/Index.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container inicio">
+            
+            <button id="bienvenido" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                <h1>INGRESAR</h1>
+            </button>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title " id="exampleModalLabel ">Iniciar seccion</h1>
+                        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-row  container">
+                            <div class="form-group col-md-8 ">
+                                <label>Usuario<span>*</span> </label>
+                                <input type="email" id="Usuario" class="form-control" placeholder="Porfavor digite el usuario" >
+                                <label  class="none" id="txtUsuario">El campo es obligatorio</label>
+                            </div>
+                        </div>
+                        <div class="form-row  container">
+                            <div class="form-group col-md-8 ">
+                                <label>Contraseña<span>*</span></label>
+                                <input type="password" id="Contra" class="form-control" placeholder="Porfavor digite la contraseña" >
+                                <label class="none" id="txtContra">El campo es obligatorio</label>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button> 
+                        <button type="button" class="btn btn-primary visibilidad" onclick="Ingresar()" > Ingresar </button>                     
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="JQuery/JQuery.js"></script>
+        <script src="JQuery/Alertas.js"></script>
+        <script src="CSS/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+           function Ingresar(){
+               var n = 0, d;
+               var datos = {
+                   Usuario: $("#Usuario").val(),
+                   Contra: $("#Contra").val()
+               };
+               if($("#Usuario").val() === ""){
+                   $("#txtUsuario").show();
+                   
+               }else{
+                   $("#txtUsuario").hide();
+                   n++;
+               }
+               if($("#Contra").val() === ""){
+                   $("#txtContra").show();
+                   
+               }else{
+                   $("#txtContra").hide();
+                   n++;
+               }
+               if(n === 2){
+                   $.ajax({
+                        data: datos,
+                        url: "Registrar",
+                        type: 'post',
+                        success: function (result) {
+                            if (result === 'error') {
+                                swal({
+                                    type: 'error',
+                                    title: 'Oops...',
+                                    text: 'El usuario o contraseña son incorectas',
+                                    background: 'linear-gradient(#1c7430 , #ffffff)'
+                                });
+                            }if (result === 'ok'){
+                                swal({
+                                    type: 'success',
+                                    title: 'BIENBENIDO!',
+                                    showConfirmButton: false,
+                                    background: 'linear-gradient(#1c7430 , #ffffff)',
+                                    timer: 2150
+                                });
+                                setTimeout("window.location.replace ('Inicio.jsp');", 2000);
+                            }else{
+                                swal({
+                                    type: 'error',
+                                    title: 'Oops...',
+                                    text: 'Algo salio mal comuniquese con el administrador',
+                                    background: 'linear-gradient(#1c7430 , #ffffff)'
+                                });
+                            }
+                        }
+
+                    });
+               }
+           }
+        </script>
+    </body>
+</html>

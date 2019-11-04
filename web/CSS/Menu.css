@@ -1,0 +1,150 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/10/2019, 09:38:19 PM
+    Author     : Lucas
+*/
+
+#logo{
+    height: 60px;
+}
+.navbar{
+    background-image: radial-gradient(#FCFB00, #FF7401
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        ); 
+}
+.navbar:hover{
+    background-image: radial-gradient(#01FFC3, #FCFB00); 
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #003366;
+}
+.navbar-light .navbar-nav .nav-link :hover {
+    color: #ff0000;   
+}
+.n{
+    margin-top: 200px;
+    text-align: center;
+}
+.nombreu{
+    margin-right: 50%;
+    font: oblique bold 250% cursive;
+    background: -webkit-linear-gradient( #01FF6F, #FF015D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.navbar:hover .nombreu{   
+    font: oblique bold 270% cursive;
+    background: -webkit-linear-gradient( #fff, #FF5501);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
